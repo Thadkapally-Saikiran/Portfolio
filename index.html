@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<!-- Declares the document type as HTML5 -->
+<html lang="en">
+<!-- Opens the HTML document and sets the language attribute to English -->
+<head>
+    <!-- The head section contains meta information and links to external resources -->
+    <meta charset="UTF-8">
+    <!-- Specifies that the character encoding for the document is UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures proper rendering and touch zooming on mobile devices by setting the viewport width to device width and initial zoom level -->
+    <title>Portfolio</title>
+    <!-- Sets the title of the webpage, which appears in the browser tab -->
+    <link rel="stylesheet" href="./static/style.css">
+    <!-- Links an external CSS stylesheet to the document using Flask's url_for function to locate the static file -->
+
+
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("ohOPCJ9NWeraalPDE"); 
+        })();
+    </script>
+
+</head>
+<body>
+    <!-- The body section contains all the visible content of the webpage -->
+    <header class="header">
+        <!-- Header element for the top navigation area; assigned a class "header" for styling -->
+        <a href="#" class="logo"><span>Thadkapally Saikiran</span></a>
+        <!-- A clickable logo that links to the top of the page; displays the name "Thadkapally Saikiran" inside a span -->
+
+        <ul class="nav-links">
+            <!-- Unordered list serving as the container for navigation links; class "nav-links" for styling -->
+            <li>
+                <!-- List item for the navigation link -->
+                <a href="#about">About</a>
+                <!-- Hyperlink that scrolls to the "About" section when clicked -->
+            </li>
+
+            <li>
+                <!-- Next navigation list item -->
+                <a href="#skills">Skills</a>
+                <!-- Hyperlink that scrolls to the "Skills" section -->
+            </li>
+
+            <li>
+                <!-- Next navigation list item -->
+                <a href="#projects">Projects</a>
+                <!-- Hyperlink that scrolls to the "Projects" section -->
+            </li>
+
+            <li>
+                <!-- Next navigation list item -->
+                <a href="#contact">Contact</a>
+                <!-- Hyperlink that scrolls to the "Contact" section -->
+            </li>
+        </ul>
+
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <!-- Icon element using Font Awesome classes to display a "bars" icon, typically used as a menu toggle in mobile views; assigned an ID "menu-icon" -->
+        
+        <a href="https://github.com/Thadkapally-Saikiran">
+            <!-- Hyperlink to the GitHub profile of Thadkapally Saikiran -->
+            <button class="visit-btn">Visit GitHub</button>
+            <!-- Button styled as "visit-btn" that, when clicked, navigates to the GitHub profile -->
+        </a>
+    </header>
+
+    <section id="about" class="about">
+        <!-- Section element representing the "About" area; has an ID "about" for navigation and a class "about" for styling -->
+        <div class="about-container">
+            <!-- Container div to hold the content of the About section; class "about-container" for layout styling -->
+            <img src="./assets/My_Image-1.jpg">
+            <!-- Image element that loads a profile picture using Flask's url_for function to reference the static asset -->
+
+            <div class="info-box">
+                <!-- Div that groups together the text information and action buttons; class "info-box" for styling -->
+                <div class="text">
+                    <!-- Div for wrapping the introductory text -->
+                    <h3>Hi, I'm</h3>
+                    <!-- Heading level 3 displaying an introductory phrase -->
+                    <h1>Thadkapally Saikiran</h1>
+                    <!-- Primary heading (level 1) displaying the full name -->
+                    <span>Full Stack Python Developer</span>
+                    <!-- Span element that highlights the professional title or role -->
+                </div>
+
+                <div class="btn-group">
+                    <!-- Div grouping action buttons together; class "btn-group" for styling -->
+                    <a href="./assets/THADKAPALLY_SAIKIRAN.pdf">
+                        <!-- Link to a PDF file for downloading the CV; relative path used with Flask static file structure -->
+                        <div class="btn">Download CV</div>
+                        <!-- Button-like div styled as "btn" that triggers the CV download -->
+                    </a>
+                    <a href="#contact">
+                        <!-- Hyperlink that navigates to the "Contact" section -->
+                        <div class="btn">Hire Me</div>
+                        <!-- Button-like div styled as "btn" inviting users to get in touch for hiring -->
+                    </a>
+                </div>
+
+                <div class="socials">
+                    <!-- Div that contains social media links; class "socials" for styling -->
+                    <a href="https://github.com/Thadkapally-Saikiran?tab=repositories" style="color: black;">
+                        <!-- Link to the GitHub repositories with an inline style to set text color to black -->
+                        <i class="fa-brands fa-github"></i>
+                        <!-- Font Awesome icon representing GitHub -->
+                    </a>
+                    <a href="https://www.linkedin.com/in/thadkapally-saikiran/" style="color: black;">
+                        <!-- Link to the LinkedIn profile with inline styling for text color -->
+                        <i class="fa-brands fa-linkedin"></i>
+                        <!-- Font Awesome icon representing LinkedIn -->
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <!-- Section element representing the "Skills" area; identified by an ID and a class for styling -->
+
+        <h2 class="section-title">Skills</h2>
+        <!-- Heading level 2 with class "section-title" that displays the section's title -->
+
+        <div class="skills-info">
+            <!-- Div container for skills information; class "skills-info" for styling and layout -->
+
+            <div class="grid">
+                <!-- Div that sets up a grid layout to display individual skill cards; class "grid" for CSS grid styling -->
+                <div class="grid-card">
+                    <!-- A single grid card representing one skill; class "grid-card" for styling -->
+                    <i class="fa-brands fa-python"></i>
+                    <!-- Font Awesome icon for Python -->
+                    <span>Python</span>
+                    <!-- Span element displaying the skill name "Python" -->
+                    <p>
+                        Experienced in building and maintaining basic web applications using Flask, including routing, request handling, and templating with Jinja2. Comfortable working with core Python concepts such as data types, control structures, functions, and exception handling. Familiar with Pandas for creating DataFrames, reading and writing data, selecting subsets, and performing descriptive statistical analysis. Basic understanding of Matplotlib for visualizing data through bar charts, pie charts, histograms, scatter plots, and line graphs. Knowledgeable in regular expressions for data validations and text processing, file operations for data management, and essential date and time functions. Also aware of how generators contribute to memory-efficient iteration.
+                    </p>
+                    <!-- Paragraph describing experience and skills related to Python -->
+                </div>
+
+                <div class="grid-card">
+                    <!-- A grid card for the MySQL skill -->
+                    <i class="fa-solid fa-database"></i>
+                    <!-- Font Awesome icon representing databases -->
+                    <span>MySQL</span>
+                    <!-- Span element displaying the skill name "MySQL" -->
+                    <p>
+                        I have developed a good working knowledge of MySQL that allows me to design and manage databases efficiently. I use Data Definition Language commands (CREATE, ALTER, DROP) to build and adjust database schemas, and Data Manipulation Language commands (INSERT, UPDATE, DELETE) to manage records. I write SELECT queries, subqueries, and apply join operations (including inner joins and left joins) to integrate data from multiple tables. I also have an introductory understanding of normalization concepts—including the various normal forms—which guides my approach to creating consistent and efficient database structures.
+                    </p>
+                    <!-- Paragraph describing experience and skills related to MySQL -->
+                </div>
+
+                <div class="grid-card">
+                    <!-- A grid card for the HTML skill -->
+                    <i class="fa-brands fa-html5"></i>
+                    <!-- Font Awesome icon representing HTML5 -->
+                    <span>Html</span>
+                    <!-- Span element displaying the skill name "Html" -->
+                    <p>
+                        I have built a good foundation in HTML that allows me to create well-structured and semantic web pages. I can set up a proper document using the DOCTYPE declaration along with html, head, and body tags, and work with various elements—headings, paragraphs, images, links, lists, tables, and forms—to organize content effectively. I understand how to use attributes like id, class, src, and href to manage both absolute and relative paths for linking resources, and I utilize semantic tags such as nav, header, footer, and article to enhance accessibility and SEO. Additionally, I integrate multimedia content like audio and video to create interactive experiences
+                    </p>
+                    <!-- Paragraph describing experience and skills related to HTML -->
+                </div>
+
+                <div class="grid-card">
+                    <!-- A grid card for the CSS skill -->
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <!-- Font Awesome icon representing CSS3 -->
+                    <span>CSS</span>
+                    <!-- Span element displaying the skill name "CSS" -->
+                    <p>
+                        I have built a good foundation in CSS that enables me to style and layout web pages effectively. I work with various selectors—tag, class, and id—to apply styles such as colors, fonts, margins, padding, and borders, while understanding the box model to manage element dimensions and spacing. I also use modern layout techniques like Flexbox and CSS Grid, along with media queries, to create responsive designs. Additionally, I incorporate transitions, transforms, and animations to add interactive effects and enhance the overall user experience.
+                    </p>
+                    <!-- Paragraph describing experience and skills related to CSS -->
+                </div>
+
+                <div class="grid-card">
+                    <!-- A grid card for the JavaScript skill -->
+                    <i class="fa-brands fa-js"></i>
+                    <!-- Font Awesome icon representing JavaScript -->
+                    <span>JavaScript</span>
+                    <!-- Span element displaying the skill name "JavaScript" -->
+                    <p>
+                        Understanding JavaScript's core concepts and implementation techniques supports effective development. Skills include working with variables using let, var, and const; comprehending data types, operators, and control structures such as conditionals and loops; and using functions in both declaration and expression forms. Expertise in DOM manipulation and event handling contributes to building interactive web pages. Familiarity with modern ES6 features—such as arrow functions, template literals, and asynchronous operations—and fundamentals of the Node.js environment enables implementation of scripts that enhance interactivity and functionality.
+                    </p>
+                    <!-- Paragraph describing experience and skills related to JavaScript -->
+                </div>
+
+                <div class="grid-card">
+                    <!-- A grid card for the Bootstrap skill -->
+                    <i class="fa-brands fa-bootstrap"></i>
+                    <!-- Font Awesome icon representing Bootstrap -->
+                    <span>Bootstrap</span>
+                    <!-- Span element displaying the skill name "Bootstrap" -->
+                    <p>
+                        I have built a good working knowledge of Bootstrap—a popular front-end framework that helps me design responsive and attractive websites easily. I use its grid system with containers, rows, and columns to create layouts that adjust smoothly to different screen sizes. I also work with pre-built components such as cards, buttons, modals, and spinners to add interactive features without having to build them from scratch. In addition, I use Bootstrap’s utility classes for spacing, text styling, and colors to quickly style my pages. Overall, Bootstrap makes it easier for me to create modern, mobile-friendly websites.
+                    </p>
+                    <!-- Paragraph describing experience and skills related to Bootstrap -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <!-- Section element representing the "Projects" area; identified by an ID "projects" and a class "projects" for styling -->
+        <h2 class="section-title">Recent Projects</h2>
+        <!-- Heading level 2 with class "section-title" that displays the title "Recent Projects" -->
+
+        <div class="projects-grid">
+            <!-- Div container that sets up a grid layout for project cards; class "projects-grid" for styling -->
+
+            <div class="project-card">
+                <!-- A single project card; class "project-card" for styling -->
+                <img src="./assets/ecommerce.webp">
+                <!-- Image element for the project thumbnail, using Flask's url_for to locate the asset -->
+                <h3>E-Commerce Platform (ECP): Web Application Development</h3>
+                <!-- Heading level 3 that displays the project's title -->
+                <p>
+                    Built a secure and responsive e-commerce web application using Flask, featuring user authentication, product management, and Razorpay payment integration. Dynamic product details are rendered via Jinja2 templating with data fetched from MySQL, while JavaScript is employed for payment processing. Secure session management and robust API routes ensure efficient, modular code
+                </p>
+                <!-- Paragraph describing the project details -->
+                <div class="btn-group">
+                    <!-- Div grouping buttons for project actions -->
+                    <!-- <div class="btn">Live Demo</div> -->
+                    <!-- A button (styled as a div with class "btn") for a live demo (action to be implemented) -->
+                    <a href="https://github.com/Thadkapally-Saikiran/Flask-Ecommerce.git">
+                        <!-- Hyperlink to the GitHub repository for this project -->
+                        <div class="btn">Github</div>
+                        <!-- A button-like div that indicates a link to the GitHub repository -->
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <!-- A second project card -->
+                <img src="./assets/sms.webp">
+                <!-- Image element for the project, loaded via Flask's url_for -->
+                <h3>Student Management System (SMS): Web Application Development</h3>
+                <!-- Project title displayed in a heading -->
+                <p>
+                    A Flask-based web application for managing student records with secure authentication, CRUD operations, and data export to Excel. Features session handling, flash messaging, and a responsive UI for seamless user experience
+                </p>
+                <!-- Paragraph describing the project details -->
+                <div class="btn-group">
+                    <!-- Div grouping action buttons -->
+                    <!-- <div class="btn">Live Demo</div> -->
+                    <!-- Button-like div for live demo action -->
+                    <a href="https://github.com/Thadkapally-Saikiran/Flask-Student-Management-System.git">
+                        <!-- Hyperlink to the GitHub repository for this project -->
+                        <div class="btn">Github</div>
+                        <!-- Button-like div that indicates a link to the GitHub repository -->
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <!-- A third project card -->
+                <img src="./assets/emailauto.webp">
+                <!-- Image element for the project -->
+                <h3>E-commerce Email Automation & OTP Verification System</h3>
+                <!-- Project title displayed in a heading -->
+                <p>
+                    Developed an automated email system with OTP verification, integrating Flask-based session management, dynamic email content, and secure server-side validation for seamless user authentication.
+                </p>
+                <!-- Paragraph describing the project details -->
+                <div class="btn-group">
+                    <!-- Div grouping action buttons -->
+                    <!-- <div class="btn">Live Demo</div> -->
+                    <!-- Button-like div for live demo action -->
+                    <a href="https://github.com/Thadkapally-Saikiran/Flask_Ecommerce_Email_Automation_OTP_Verification.git">
+                        <!-- Hyperlink to the GitHub repository for this project -->
+                        <div class="btn">Github</div>
+                        <!-- Button-like div that indicates a link to the GitHub repository -->
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <!-- A fourth project card -->
+                <img src="./assets/todo.webp">
+                <!-- Image element for the project -->
+                <h3>TaskFlow: Streamlined Task Management</h3>
+                <!-- Project title displayed in a heading -->
+                <p>
+                    A responsive web app built with HTML, CSS, JavaScript, and Bootstrap that enables efficient task management with features to add, edit, delete, and clear tasks, alongside intuitive priority indicators
+                </p>
+                <!-- Paragraph describing the project details -->
+                <div class="btn-group">
+                    <!-- Div grouping action buttons -->
+                    <a href="https://todolist20010310.netlify.app/">
+                        <!-- Hyperlink to the live demo of the project -->
+                        <div class="btn">Live Demo</div>
+                        <!-- Button-like div for live demo action -->
+                    </a>
+                    <a href="https://github.com/Thadkapally-Saikiran/JavaScript_TODO_App.git">
+                        <!-- Hyperlink to the GitHub repository for this project -->
+                        <div class="btn">Github</div>
+                        <!-- Button-like div that indicates a link to the GitHub repository -->
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <!-- A fourth project card -->
+                <img src="./assets/paytmtemplate.webp">
+                <!-- Image element for the project -->
+                <h3>Paytm Clone UI: A Responsive, Static Web Interface</h3>
+                <!-- Project title displayed in a heading -->
+                <p>
+                    Developed a responsive static web interface inspired by Paytm’s design. Built solely with HTML, CSS, and Bootstrap, this project features an interactive navbar, flight search section, carousel banners, and a special fares display. The design is optimized for desktop, tablet, and mobile devices, demonstrating modern UI techniques and clean, modular code
+                </p>
+                <!-- Paragraph describing the project details -->
+                <div class="btn-group">
+                    <!-- Div grouping action buttons -->
+                    <a href="https://paymentclonedashboard10200103.netlify.app/">
+                        <!-- Hyperlink to the live demo of the project -->
+                        <div class="btn">Live Demo</div>
+                        <!-- Button-like div for live demo action -->
+                    </a>
+                    <a href="https://github.com/Thadkapally-Saikiran/ResponsivePaytmClone_UI.git">
+                        <!-- Hyperlink to the GitHub repository for this project -->
+                        <div class="btn">Github</div>
+                        <!-- Button-like div that indicates a link to the GitHub repository -->
+                    </a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <!-- A fourth project card -->
+                <img src="./assets/userauth.webp">
+                <!-- Image element for the project -->
+                <h3>User_Management: User Authentication & Management System</h3>
+                <!-- Project title displayed in a heading -->
+                <p>
+                    LogiRegServerCRUD is a dynamic user authentication and management project that leverages client-side JavaScript, HTML, CSS, and Bootstrap. It features a responsive login and registration interface with robust validations and seamlessly integrates with a mock JSON server to perform CRUD operations (GET, POST, PUT, DELETE). This project demonstrates practical application of modern ES6 techniques, async/await, and Axios for API interactions—all without the complexities of a full backend.
+                </p>
+                <!-- Paragraph describing the project details -->
+                <div class="btn-group">
+                    <!-- Div grouping action buttons -->
+                    <a href="#">
+                        <!-- Hyperlink to the live demo of the project -->
+                        <div class="btn">Live Demo</div>
+                        <!-- Button-like div for live demo action -->
+                    </a>
+                    <a href="https://github.com/Thadkapally-Saikiran/LogiRegServerCRUD.git">
+                        <!-- Hyperlink to the GitHub repository for this project -->
+                        <div class="btn">Github</div>
+                        <!-- Button-like div that indicates a link to the GitHub repository -->
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <!-- Section element representing the "Contact" area; identified by an ID "contact" and class "contact" for styling -->
+        <h2 class="contact-tile">Contact Me</h2>
+        <!-- Heading level 2 with class "contact-tile" that displays the title "Contact Me" -->
+        <div class="contact-box">
+            <!-- Container div for the contact section content; class "contact-box" for layout and styling -->
+            <div class="contact-info">
+                <!-- Div that holds the contact information details; class "contact-info" for styling -->
+                <h3 class="title">Get in touch</h3>
+                <!-- Heading level 3 with class "title" displaying the phrase "Get in touch" -->
+                <p class="text">
+                    Drop a message using the form below, or reach me by phone from 9:00 am. to 8:00 pm., Monday to Friday. Can't wait to hear from you!
+                </p>
+                <!-- Paragraph providing instructions on how to get in touch -->
+                <div class="information-wrap">
+                    <!-- Wrapper div for individual pieces of contact information; class "information-wrap" for styling -->
+                    <div class="information">
+                        <!-- Div for a single contact information item; class "information" for layout -->
+                        <div class="contact-icon">
+                            <!-- Div for the icon representing the type of contact info; class "contact-icon" for styling -->
+                            <i class="fa-solid fa-location-dot"></i>
+                            <!-- Font Awesome icon for a location marker -->
+                        </div>
+                        <p class="info-text">Ameerpet, Hyderabad, Telangana</p>
+                        <!-- Paragraph with class "info-text" displaying the location information -->
+                    </div>
+
+                    <div class="information">
+                        <!-- Div for the next contact information item -->
+                        <div class="contact-icon">
+                           <!-- Container for the email icon -->
+                           <i class="fa-solid fa-envelope"></i>
+                           <!-- Font Awesome icon representing an envelope for email -->
+                        </div>
+                        <p class="info-text">thadkapallysaikiran2001@gmail.com</p>
+                        <!-- Paragraph displaying the email address -->
+                    </div>
+
+                    <div class="information">
+                        <!-- Div for the phone contact information -->
+                        <div class="contact-icon">
+                            <!-- Container for the phone icon -->
+                            <i class="fa-solid fa-phone"></i>
+                            <!-- Font Awesome icon representing a phone -->
+                        </div>
+                        <p class="info-text">+91-7671083785</p>
+                        <!-- Paragraph displaying the phone number -->
+                    </div>
+
+                    <div class="information">
+                        <!-- Div for the LinkedIn contact information -->
+                        <a href="https://www.linkedin.com/in/thadkapally-saikiran/">
+                            <!-- Hyperlink that directs to the LinkedIn profile -->
+                            <div class="contact-icon">
+                                <!-- Container for the LinkedIn icon -->
+                              <i class="fa-brands fa-linkedin"></i>
+                              <!-- Font Awesome icon representing LinkedIn -->
+                            </div>
+                            <p class="info-text">Linkedin</p>
+                            <!-- Paragraph displaying the text "Linkedin" -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <form id="contactForm" class="contact-form">
+                <!-- A form element for user messages with an ID "contactForm" and class "contact-form" for styling -->
+                <h3 class="title">Contact me</h3>
+                <!-- Heading level 3 with class "title" for the form section -->
+                <div class="row">
+                    <!-- Div representing a row in the form layout; class "row" for styling -->
+                    <input type="text" name="first_name" class="contact-input" placeholder="First Name" required>
+                    <!-- Input field for the user's first name; uses class "contact-input", has a placeholder, and is required -->
+                    <input type="text" name="last_name" class="contact-input" placeholder="Last Name" required>
+                    <!-- Input field for the user's last name with similar attributes -->
+                </div>
+                <div class="row">
+                    <!-- Next row in the form -->
+                    <input type="text" name="phone" class="contact-input" placeholder="Phone" required>
+                    <!-- Input field for the user's phone number -->
+                    <input type="email" name="email" class="contact-input" placeholder="Email" required>
+                    <!-- Input field for the user's email address; type set to "email" for validation -->
+                </div>
+                <div class="row">
+                    <!-- Next row in the form -->
+                    <textarea name="message" class="contact-input textarea" placeholder="Message" required></textarea>
+                    <!-- Textarea for the user's message; uses classes "contact-input" and "textarea", includes a placeholder, and is required -->
+                </div>
+                <button type="submit" class="btn">Submit</button>
+                <!-- Submit button for the form with class "btn" for styling -->
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <!-- Footer section of the webpage -->
+        <ul>
+            <!-- Unordered list for footer navigation links -->
+            <li>
+                <a href="#about">About</a>
+                <!-- Link that navigates to the "About" section -->
+            </li>
+            
+            <li>
+                <a href="#skills">Skills</a>
+                <!-- Link that navigates to the "Skills" section -->
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+                <!-- Link that navigates to the "Projects" section -->
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+                <!-- Link that navigates to the "Contact" section -->
+            </li>
+        </ul>
+
+        <p class="copyright">@ All Rights Reserved | Thadkapally Saikiran</p>
+        <!-- Paragraph displaying copyright information with class "copyright" -->
+    </footer>
+
+    <script src="https://kit.fontawesome.com/4c8ea8f5ff.js" crossorigin="anonymous"></script>
+    <!-- Script tag that loads the Font Awesome kit for icon usage, with crossorigin attribute for security -->
+    <script src="./script.js"></script>
+    <!-- Script tag linking to an external JavaScript file for custom functionality -->
+</body>
+<!-- End of the body section -->
+</html>
+<!-- End of the HTML document -->
