@@ -648,6 +648,25 @@ footer ul li a{
 }
 
 
+@media screen and (min-width: 480px) and (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .grid-card {
+        min-width: 250px;
+    }
+    .grid-card p,
+    .grid-card h3,
+    .grid-card span {
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+}
+
+
+
+
 /* ----------------------------- */
 /* Responsive adjustments for the Projects section */
 /* ----------------------------- */
