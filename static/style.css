@@ -587,28 +587,10 @@ footer ul li a{
         grid-template-columns: repeat(1,1fr);  /* Change grid layout to a single column for better mobile display */
     }
 
-
-    .grid-card p,
-    .grid-card h3,
-    .grid-card span {
-        white-space: normal;
-        overflow-wrap: break-word;
-        word-wrap: break-word;
-    }
-
 }
 
 /* Adjustments for screens with a maximum width of 600px */
 @media(max-width:600px){
-    .grid-card p,
-    .grid-card h3,
-    .grid-card span {
-        white-space: normal;
-        overflow-wrap: break-word;
-        word-wrap: break-word;
-    }
-
-
 
     header #menu-icon{
         display: block;          /* Show the menu icon for mobile devices */
@@ -665,6 +647,19 @@ footer ul li a{
     }
 }
 
+
+
+.grid-card p,
+.grid-card h3,
+.grid-card span {
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.grid-card {
+    min-width: 250px; /* Optional, helps prevent columns/cards from becoming too narrow */
+}
 
 
 
