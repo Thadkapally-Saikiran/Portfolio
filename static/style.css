@@ -648,22 +648,6 @@ footer ul li a{
 }
 
 
-
-.grid-card p,
-.grid-card h3,
-.grid-card span {
-    white-space: normal;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-}
-
-.grid-card {
-    min-height: 250px; /* Optional, helps prevent columns/cards from becoming too narrow */
-}
-
-
-
-
 /* ----------------------------- */
 /* Responsive adjustments for the Projects section */
 /* ----------------------------- */
