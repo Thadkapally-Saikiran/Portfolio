@@ -592,7 +592,7 @@ footer ul li a{
     .grid-card h3,
     .grid-card span {
         white-space: normal;
-        overflow-wrap: break-word;
+        /* overflow-wrap: break-word; */
         word-wrap: break-word;
     }
 
@@ -607,7 +607,7 @@ footer ul li a{
     .grid-card h3,
     .grid-card span {
         white-space: normal;
-        overflow-wrap: break-word;
+        /* overflow-wrap: break-word; */
         word-wrap: break-word;
     }
 
