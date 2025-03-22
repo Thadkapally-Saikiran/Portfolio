@@ -176,7 +176,7 @@ section{
     border-radius: 3rem;           /* Round button corners with a 3rem radius */
     padding: 0.5rem 1.5rem;         /* Set padding for top/bottom and left/right */
     border: 2px solid black;       /* Add a 2px solid black border */
-    cursor: pointer;               /* Change cursor to pointer when hovering over the button */
+    cursor: pointer;               /* Change cursor to pointer to indicate interactivity */
     font-weight: 500;              /* Set font weight to medium */
     text-wrap: nowrap;             /* Prevent text wrapping (non-standard property) */
     transition: 0.2s ease-in-out;  /* Animate changes over 0.2 seconds */
@@ -297,7 +297,7 @@ a .btn{
 /* Projects grid layout styling */
 .projects-grid{
     display: grid;                /* Use CSS Grid layout */
-    grid-template-columns: repeat(3, 1fr);  /* Create 4 equal-width columns */
+    grid-template-columns: repeat(3, 1fr);  /* Create 3 equal-width columns */
     gap: 2rem;                    /* Add a gap of 2rem between project cards */
 }
 
@@ -547,9 +547,8 @@ footer ul li a{
 }
 
 
-
 /* ----------------------------- */
-/* Media Queries */
+/* Media Queries (Modified Responsive Changes) */
 /* ----------------------------- */
 
 /* Adjustments for screens with a maximum width of 1280px */
@@ -584,24 +583,27 @@ footer ul li a{
     }
     .about-container{
         flex-direction: column;  /* Stack items vertically in the About container */
+        gap: 2rem;               /* Reduce gap to prevent clumping */
     }
     .grid{
-        grid-template-columns: repeat(1,1fr);  /* Change grid layout to a single column for better mobile display */
+        grid-template-columns: repeat(1,1fr);  /* Single column grid for skills */
+        gap: 1.5rem;             /* Reduce gap for better spacing */
     }
-
+    .contact-box {
+        padding: 4rem 2rem;       /* Reduce padding inside contact box */
+    }
 }
 
 /* Adjustments for screens with a maximum width of 600px */
 @media(max-width:600px){
-
     header #menu-icon{
         display: block;          /* Show the menu icon for mobile devices */
     }
     .nav-links{
         position: absolute;      /* Position navigation links absolutely for mobile layout */
         top: 100%;               /* Place the navigation links directly below the header */
-        margin-top: 1rem;        /* Add margin on top to separate from the header */
-        width: 100%;             /* Make the navigation links container full-width */
+        margin-top: 0.5rem;       /* Reduce margin on top to tighten spacing */
+        width: 90%;              /* Use 90% width to allow for some side margins */
         padding: 1rem;           /* Add padding for spacing inside the container */
         color: white;            /* Set text color to white */
         display: flex;           /* Use flexbox layout for the navigation links */
@@ -612,18 +614,18 @@ footer ul li a{
         display: none;           /* Hide the navigation links by default (toggled via script) */
     }
     .nav-links li{
-        margin-top: 1.5rem;      /* Add top margin for spacing between list items */
-        padding: 1rem;           /* Add padding around each navigation list item */
+        margin-top: 1rem;      /* Reduce top margin for spacing between list items */
+        padding: 0.8rem;           /* Reduce padding around each navigation list item */
     }
     .nav-links.active{
         display: block;          /* Display the navigation links when the "active" class is applied */
     }
     header{
-        padding: 1rem 5rem;      /* Adjust header padding on very small screens */
-        gap: 8rem;               /* Increase gap between header elements (may be intentional for design) */
+        padding: 1rem 1.5rem;      /* Adjust header padding on very small screens */
+        gap: 1.5rem;              /* Reduce gap between header elements */
     }
     header .logo{
-        font-size: 1.5rem;       /* Increase logo font size slightly for visibility */
+        font-size: 1.2rem;       /* Slightly adjust logo font size for visibility */
     }
     .about-container img{
         width: 80vw;             /* Set the About section image to 80% of the viewport width */
@@ -631,28 +633,26 @@ footer ul li a{
     .contact-box{
         display: flex;           /* Use flexbox layout for contact box */
         flex-direction: column;  /* Stack contact box elements vertically on mobile */
+        padding: 3rem 1rem;       /* Reduce overall padding */
     }
     .contact-form{
-        margin-top: 3rem;        /* Add top margin to separate contact form from other elements */
+        margin-top: 2rem;        /* Reduce top margin to separate contact form from other elements */
+        padding-left: 0;         /* Remove left padding to use full width */
     }
-    .contact-form input{
-        padding: 0.5rem 3rem;     /* Adjust input padding for mobile devices */
-        width: 80%;              /* Set input width to 80% for better fit on mobile screens */
-        font-size: 1.5rem;       /* Increase input font size for readability */
+    .contact-form input, 
+    .contact-form textarea{
+        padding: 0.8rem 1rem;     /* Adjust input padding for mobile devices */
+        width: 100%;             /* Set input width to full container width */
+        font-size: 1.3rem;       /* Adjust input font size for readability */
     }
     .contact-form input::placeholder{
         text-wrap: nowrap;       /* Prevent placeholder text from wrapping (non-standard property) */
-        font-size: 1.5rem;       /* Ensure placeholder text is readable on smaller screens */
+        font-size: 1.3rem;       /* Adjust placeholder font size */
     }
     footer ul{
         gap: 1rem;              /* Reduce gap between footer list items on small screens */
     }
 }
-
-
-
-
-
 
 /* ----------------------------- */
 /* Responsive adjustments for the Projects section */
@@ -678,4 +678,3 @@ footer ul li a{
         grid-template-columns: 1fr; /* Use a single column layout for project cards on small screens */
     }
 }
-
