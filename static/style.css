@@ -240,7 +240,7 @@ a .btn{
 /* Grid layout for skills cards */
 .grid{
     display: grid;                /* Use CSS Grid for layout */
-    grid-template-columns: repeat(3, 1fr);  /* Create 3 equal-width columns */
+    grid-template-columns: repeat(2, 1fr);  /* Create 3 equal-width columns */
     gap: 2rem;                    /* Add a gap of 2rem between grid items */
 }
 
