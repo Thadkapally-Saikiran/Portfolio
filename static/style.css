@@ -546,6 +546,8 @@ footer ul li a{
     margin-top: 2rem;            /* Add a top margin of 2rem */
 }
 
+
+
 /* ----------------------------- */
 /* Media Queries */
 /* ----------------------------- */
@@ -586,10 +588,12 @@ footer ul li a{
     .grid{
         grid-template-columns: repeat(1,1fr);  /* Change grid layout to a single column for better mobile display */
     }
+
 }
 
 /* Adjustments for screens with a maximum width of 600px */
 @media(max-width:600px){
+
     header #menu-icon{
         display: block;          /* Show the menu icon for mobile devices */
     }
@@ -646,6 +650,10 @@ footer ul li a{
 }
 
 
+
+
+
+
 /* ----------------------------- */
 /* Responsive adjustments for the Projects section */
 /* ----------------------------- */
@@ -670,3 +678,4 @@ footer ul li a{
         grid-template-columns: 1fr; /* Use a single column layout for project cards on small screens */
     }
 }
+
