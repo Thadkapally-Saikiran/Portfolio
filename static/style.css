@@ -20,7 +20,7 @@ header {
     justify-content: center;       /* Horizontally center the header items */
     gap: 5rem;                     /* Add a 5rem gap between each direct child element */
     background-color: rgba(0,0,0,0.8); /* Set a semi-transparent black background color */
-    backdrop-filter:  blur(8px);    /* Apply a blur effect to the background behind the header */
+    backdrop-filter:  blur(8px);   /* Apply a blur effect to the background behind the header */
     color: white;                  /* Set the text color to white */
     padding: 0.5rem 1.5rem;        /* Add padding: 0.5rem top/bottom and 1.5rem left/right */
     border-radius: 3rem;           /* Round the corners of the header with a 3rem radius */
@@ -128,7 +128,6 @@ section{
 /* Styling for the image in the About section */
 .about img{
     /* box-shadow: 0px 0px 30px #00ffff, 0px 0px 60px #00ffff, 0px 0px 100px #00ffff; */
-                                 /* Box shadow is commented out; it would add multiple layers of cyan glow if enabled */
     width: 450px;                  /* Set image width to 450px */
     height: 450px;                 /* Set image height to 450px */
     border-radius: 100%;           /* Make the image circular by setting a full border radius */
@@ -159,7 +158,7 @@ section{
 
 /* Span element inside info-box for highlighting text */
 .info-box span{
-    background: linear-gradient(to right, rgba(255,0,255), rgb(0, 157, 255)); /* Apply a gradient background from magenta to blue */
+    background: linear-gradient(to right, rgba(255,0,255), rgb(0, 157, 255)); /* Apply a gradient background */
     background-clip: text;         /* Clip the background to the text (for gradient text effect) */
     color: transparent;            /* Make the text transparent so the gradient shows through */
     font-size: 2rem;               /* Set font size to 2rem */
@@ -255,10 +254,15 @@ a .btn{
     justify-content: left;         /* Align items to the left (default for column) */
     cursor: pointer;               /* Change cursor to pointer to indicate interactivity */
     transition: 0.2s ease-in-out;  /* Animate changes over 0.2 seconds */
+    height: 600px;                 /* Fix card height so it doesn’t stretch too tall */
+    overflow-y: auto;              /* Let content scroll if it's too long */
 
-    /* FIXED HEIGHT & SCROLL: ensures the card doesn’t stretch too tall */
-    height: 600px;                 /* You can adjust this if you want more/less space */
-    overflow-y: auto;              /* Allow scrolling inside the card if content is long */
+    /* HIDE THE SCROLLBAR */
+    -ms-overflow-style: none;      /* IE and Edge */
+    scrollbar-width: none;         /* Firefox */
+}
+.grid-card::-webkit-scrollbar {
+    display: none;                 /* Chrome, Safari, Opera */
 }
 
 /* Hover effect for grid cards */
@@ -283,19 +287,15 @@ a .btn{
     color: transparent;            /* Make the text transparent so the gradient is visible */
 }
 
-/* Custom scrollbar styling for WebKit browsers */
+/* Custom scrollbar styling for WebKit browsers (now hidden, so it won't show) */
 ::-webkit-scrollbar{
-    width: 20px;                   /* Set the width of the scrollbar to 20px */
+    width: 20px;                   /* Original styling remains, but it's hidden by display:none above */
 }
-
-/* Styling for the track (background) of the scrollbar */
 ::-webkit-scrollbar-track{
-    background-color: rgb(219,219,219);  /* Set the track background color to a light gray */
+    background-color: rgb(219,219,219);
 }
-
-/* Styling for the draggable thumb of the scrollbar */
 ::-webkit-scrollbar-thumb{
-    background: linear-gradient(to bottom, #009dff, #ff00ff); /* Apply a vertical gradient to the scrollbar thumb */
+    background: linear-gradient(to bottom, #009dff, #ff00ff);
 }
 
 /* Projects grid layout styling */
@@ -682,12 +682,20 @@ footer ul li a{
     }
 }
 
-/* -----------------------------
-   Extra tweak for smaller screens to reduce paragraph size in Skills
-------------------------------*/
+/* Slightly reduce paragraph font size in Skills if needed (optional) */
 @media (max-width: 900px) {
   .grid-card p {
-    font-size: 1rem;       /* Slightly smaller text to avoid clumsy wrapping */
+    font-size: 1rem;
     line-height: 1.5;
   }
 }
+
+
+
+/* -----------------------------
+   ADD THIS TO CENTER .projects-grid AND GIVE A RIGHT-SIDE GAP
+------------------------------*/
+.projects-grid {
+    width: 90%;          /* Shrink width to leave space on both sides */
+    margin: 0 auto;      /* Center horizontally within its container */
+  }
