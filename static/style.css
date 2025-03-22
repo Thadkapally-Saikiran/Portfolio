@@ -583,9 +583,9 @@ footer ul li a{
     .about-container{
         flex-direction: column;  /* Stack items vertically in the About container */
     }
-    .grid{
-        grid-template-columns: repeat(1,1fr);  /* Change grid layout to a single column for better mobile display */
-    }
+    /* .grid{
+        grid-template-columns: repeat(1,1fr);  Change grid layout to a single column for better mobile display 
+    }*/
 }
 
 /* Adjustments for screens with a maximum width of 600px */
