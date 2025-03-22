@@ -546,148 +546,155 @@ footer ul li a{
     margin-top: 2rem;            /* Add a top margin of 2rem */
 }
 
+
+
 /* ----------------------------- */
 /* Media Queries */
 /* ----------------------------- */
 
-/* Adjustments for screens with a maximum width of 1280px */
-@media(max-width:1280px){
-    header{
+/* Adjustments for screens between 769px and 1280px (tablets and laptops) */
+@media screen and (min-width: 769px) and (max-width: 1280px) {
+    header {
         padding: 1rem 2rem;      /* Reduce header padding for medium screens */
         gap: 2rem;               /* Reduce gap between header items */
     }
-    .about .about-container{
+    .about .about-container {
         gap: 3rem;               /* Reduce gap between items in the About section */
     }
-    .skills-info{
+    .skills-info {
         flex-direction: column;  /* Stack skills info vertically on smaller screens */
     }
 }
 
-/* Adjustments for screens with a maximum width of 768px */
-@media(max-width:768px){
-    header{
+/* Adjustments for screens between 601px and 768px */
+@media screen and (min-width: 601px) and (max-width: 768px) {
+    header {
         gap: 1rem;               /* Further reduce gap between header items */
         padding: 1rem 1rem;       /* Reduce header padding */
     }
-    .contact-form input::placeholder{
+    .contact-form input::placeholder {
         text-wrap: wrap;         /* Allow placeholder text to wrap (non-standard property) */
-        font-size: 1.5rem;        /* Increase font size for readability on smaller screens */
+        font-size: 1.5rem;        /* Increase placeholder font size for readability */
     }
-    header .logo{
+    header .logo {
         font-size: 1rem;         /* Reduce logo font size */
     }
-    header .visit-btn{
-        display: none;           /* Hide the visit button on smaller screens */
+    header .visit-btn {
+        display: none;           /* Hide the visit button */
     }
-    .about-container{
-        flex-direction: column;  /* Stack items vertically in the About container */
+    .about-container {
+        flex-direction: column;  /* Stack About container items vertically */
     }
-    .grid{
-        grid-template-columns: repeat(1,1fr);  /* Change grid layout to a single column for better mobile display */
+    .grid {
+        grid-template-columns: repeat(1, 1fr);  /* Force single-column for very narrow widths */
     }
-
 }
 
-/* Adjustments for screens with a maximum width of 600px */
-@media(max-width:600px){
-
-    header #menu-icon{
-        display: block;          /* Show the menu icon for mobile devices */
+/* Adjustments for screens 600px and below */
+@media screen and (max-width: 600px) {
+    header #menu-icon {
+        display: block;          /* Show the menu icon on mobile devices */
     }
-    .nav-links{
-        position: absolute;      /* Position navigation links absolutely for mobile layout */
-        top: 100%;               /* Place the navigation links directly below the header */
-        margin-top: 1rem;        /* Add margin on top to separate from the header */
-        width: 100%;             /* Make the navigation links container full-width */
-        padding: 1rem;           /* Add padding for spacing inside the container */
-        color: white;            /* Set text color to white */
-        display: flex;           /* Use flexbox layout for the navigation links */
-        flex-direction: column;  /* Stack navigation links vertically */
-        text-align: center;      /* Center-align the text inside navigation links */
-        background: rgba(0,0,0,0.9); /* Use a more opaque background for better visibility */
-        border-radius: 3rem;     /* Round the corners of the navigation links container */
-        display: none;           /* Hide the navigation links by default (toggled via script) */
+    .nav-links {
+        position: absolute;      
+        top: 100%;               
+        margin-top: 1rem;        
+        width: 100%;             
+        padding: 1rem;           
+        color: white;            
+        display: flex;           
+        flex-direction: column;  
+        text-align: center;      
+        background: rgba(0, 0, 0, 0.9);
+        border-radius: 3rem;
+        /* Initially hidden; toggled via script */
+        display: none;
     }
-    .nav-links li{
-        margin-top: 1.5rem;      /* Add top margin for spacing between list items */
-        padding: 1rem;           /* Add padding around each navigation list item */
+    .nav-links li {
+        margin-top: 1.5rem;
+        padding: 1rem;
     }
-    .nav-links.active{
-        display: block;          /* Display the navigation links when the "active" class is applied */
+    .nav-links.active {
+        display: block;          /* Show navigation links when active */
     }
-    header{
+    header {
         padding: 1rem 5rem;      /* Adjust header padding on very small screens */
-        gap: 8rem;               /* Increase gap between header elements (may be intentional for design) */
+        gap: 8rem;               /* Increase gap between header elements */
     }
-    header .logo{
+    header .logo {
         font-size: 1.5rem;       /* Increase logo font size slightly for visibility */
     }
-    .about-container img{
-        width: 80vw;             /* Set the About section image to 80% of the viewport width */
+    .about-container img {
+        width: 80vw;             /* Set About section image to 80% of viewport width */
     }
-    .contact-box{
-        display: flex;           /* Use flexbox layout for contact box */
-        flex-direction: column;  /* Stack contact box elements vertically on mobile */
+    .contact-box {
+        display: flex;
+        flex-direction: column;  /* Stack contact box elements vertically */
     }
-    .contact-form{
-        margin-top: 3rem;        /* Add top margin to separate contact form from other elements */
+    .contact-form {
+        margin-top: 3rem;        /* Separate contact form from other elements */
     }
-    .contact-form input{
-        padding: 0.5rem 3rem;     /* Adjust input padding for mobile devices */
-        width: 80%;              /* Set input width to 80% for better fit on mobile screens */
-        font-size: 1.5rem;       /* Increase input font size for readability */
+    .contact-form input {
+        padding: 0.5rem 3rem;     
+        width: 80%;              
+        font-size: 1.5rem;       
     }
-    .contact-form input::placeholder{
-        text-wrap: nowrap;       /* Prevent placeholder text from wrapping (non-standard property) */
-        font-size: 1.5rem;       /* Ensure placeholder text is readable on smaller screens */
+    .contact-form input::placeholder {
+        text-wrap: nowrap;       /* Prevent placeholder text from wrapping */
+        font-size: 1.5rem;
     }
-    footer ul{
-        gap: 1rem;              /* Reduce gap between footer list items on small screens */
-    }
-}
-
-
-@media screen and (min-width: 480px) and (max-width: 1024px) {
-    .projects-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .grid-card {
-        min-height: 250px;
-    }
-    .grid-card p,
-    .grid-card h3,
-    .grid-card span {
-        white-space: normal;
-        overflow-wrap: break-word;
-        word-wrap: break-word;
+    footer ul {
+        gap: 1rem;              /* Reduce gap between footer list items */
     }
 }
-
-
-
 
 /* ----------------------------- */
 /* Responsive adjustments for the Projects section */
 /* ----------------------------- */
 
-/* For smaller desktops or laptops */
-@media (max-width: 1024px) {
+/* Global styles for larger screens (desktop and above) */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+    gap: 2rem;
+}
+
+/* Laptops: between 1024px and 1280px */
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
     .projects-grid {
-        grid-template-columns: repeat(3, 1fr); /* Change the grid layout to 3 columns on medium screens */
+         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* For tablet devices */
-@media (max-width: 768px) {
+/* Tablets: between 768px and 1023px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     .projects-grid {
-        grid-template-columns: repeat(2, 1fr); /* Change the grid layout to 2 columns on tablet screens */
+         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* For mobile devices */
-@media (max-width: 480px) {
+/* Mobile Desktop View Mode: between 480px and 767px */
+/* This ensures that even if a mobile device is set to "desktop mode," a multi‑column layout is preserved */
+@media screen and (min-width: 480px) and (max-width: 767px) {
     .projects-grid {
-        grid-template-columns: 1fr; /* Use a single column layout for project cards on small screens */
+         grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-card {
+         min-width: 250px;  /* Prevent cards from becoming too narrow */
+    }
+    .grid-card p,
+    .grid-card h3,
+    .grid-card span {
+         white-space: normal;           /* Allow text to wrap */
+         overflow-wrap: break-word;
+         word-wrap: break-word;
     }
 }
+
+/* Very Small Mobile Devices: below 480px */
+@media screen and (max-width: 479px) {
+    .projects-grid {
+         grid-template-columns: 1fr;
+    }
+}
+
