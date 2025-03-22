@@ -105,7 +105,7 @@ li a:hover::before{
 /* Style for any section element */
 section{
     min-height: 100vh;             /* Ensure each section is at least the height of the viewport */
-    padding: 8rem 12%;             /* Apply 8rem padding on top and bottom, 12% padding on left and right */
+    padding: 8rem 12%;             /* Apply 8rem padding on top and bottom, 12% on left/right */
     width: 100%;                   /* Set section width to 100% of its container */
     position: relative;            /* Set relative positioning to allow absolute children positioning if needed */
 }
@@ -158,7 +158,7 @@ section{
 
 /* Span element inside info-box for highlighting text */
 .info-box span{
-    background: linear-gradient(to right, rgba(255,0,255), rgb(0, 157, 255)); /* Apply a gradient background */
+    background: linear-gradient(to right, rgba(255,0,255), rgb(0, 157, 255)); /* Gradient background */
     background-clip: text;         /* Clip the background to the text (for gradient text effect) */
     color: transparent;            /* Make the text transparent so the gradient shows through */
     font-size: 2rem;               /* Set font size to 2rem */
@@ -282,7 +282,7 @@ a .btn{
 .grid-card span{
     font-size: 1.5rem;             /* Set font size to 1.5rem */
     font-weight: 500;              /* Set a medium font weight */
-    background: linear-gradient(to right, rgb(0, 157, 255), rgb(255,0,255)); /* Apply a horizontal gradient background */
+    background: linear-gradient(to right, rgb(0, 157, 255), rgb(255,0,255)); /* Horizontal gradient */
     background-clip: text;         /* Clip the background to the text for a gradient text effect */
     color: transparent;            /* Make the text transparent so the gradient is visible */
 }
@@ -326,7 +326,7 @@ a .btn{
 }
 
 .project-card h3{
-    background: linear-gradient(to right, rgb(0, 157, 255), rgb(255,0,255)); /* Apply a horizontal gradient background */
+    background: linear-gradient(to right, rgb(0, 157, 255), rgb(255,0,255)); /* Horizontal gradient */
     background-clip: text;         /* Clip the background to the text for a gradient text effect */
     color: transparent; 
 }
@@ -544,7 +544,7 @@ footer ul li a{
     font-weight: 600;              /* Set font weight to semi-bold */
 }
 
-/* Styling for the copyright text in the footer */
+/* Copyright */
 .copyright{
     font-weight: 300;              /* Use a light font weight */
     margin-top: 2rem;              /* Add a top margin of 2rem */
@@ -657,6 +657,7 @@ footer ul li a{
     }
 }
 
+
 /* ----------------------------- */
 /* Responsive adjustments for the Projects section */
 /* ----------------------------- */
@@ -689,13 +690,3 @@ footer ul li a{
     line-height: 1.5;
   }
 }
-
-
-
-/* -----------------------------
-   ADD THIS TO CENTER .projects-grid AND GIVE A RIGHT-SIDE GAP
-------------------------------*/
-.projects-grid {
-    width: 90%;          /* Shrink width to leave space on both sides */
-    margin: 0 auto;      /* Center horizontally within its container */
-  }
