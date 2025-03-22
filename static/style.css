@@ -22,7 +22,7 @@ header {
     background-color: rgba(0,0,0,0.8); /* Set a semi-transparent black background color */
     backdrop-filter:  blur(8px);    /* Apply a blur effect to the background behind the header */
     color: white;                  /* Set the text color to white */
-    padding: 0.5rem 1.5rem;         /* Add padding: 0.5rem top/bottom and 1.5rem left/right */
+    padding: 0.5rem 1.5rem;        /* Add padding: 0.5rem top/bottom and 1.5rem left/right */
     border-radius: 3rem;           /* Round the corners of the header with a 3rem radius */
     z-index: 1000;                 /* Set a high stacking order so the header appears on top of other elements */
 }
@@ -74,7 +74,7 @@ li a:hover::before{
 
 /* Style for a button typically used to 'visit' something */
 .visit-btn{
-    padding: 0.8rem 1.5rem;         /* Set padding around the button text */
+    padding: 0.8rem 1.5rem;        /* Set padding around the button text */
     border-radius: 3rem;           /* Round the button's corners */
     border: none;                  /* Remove the default border */
     font-weight: 500;              /* Set the font weight to medium */
@@ -122,7 +122,7 @@ section{
     display: flex;                 /* Use flexbox layout */
     align-items: center;           /* Vertically center the items */
     justify-content: center;       /* Horizontally center the items */
-    gap: 10rem;                   /* Set a large gap (10rem) between items for spacing */
+    gap: 10rem;                    /* Set a large gap (10rem) between items for spacing */
 }
 
 /* Styling for the image in the About section */
@@ -141,7 +141,7 @@ section{
     text-align: center;            /* Center-align the text inside the box */
     align-items: center;           /* Center items horizontally */
     justify-content: center;       /* Center items vertically */
-    gap: 1.5rem;                  /* Add a gap of 1.5rem between child elements */
+    gap: 1.5rem;                   /* Add a gap of 1.5rem between child elements */
 }
 
 /* Heading level 3 inside info-box */
@@ -168,13 +168,13 @@ section{
 /* Container for grouping buttons */
 .btn-group{
     display: flex;                 /* Use flexbox to layout buttons */
-    gap: 1rem;                    /* Set a 1rem gap between each button */
+    gap: 1rem;                     /* Set a 1rem gap between each button */
 }
 
 /* General button styling */
 .btn{
     border-radius: 3rem;           /* Round button corners with a 3rem radius */
-    padding: 0.5rem 1.5rem;         /* Set padding for top/bottom and left/right */
+    padding: 0.5rem 1.5rem;        /* Set padding for top/bottom and left/right */
     border: 2px solid black;       /* Add a 2px solid black border */
     cursor: pointer;               /* Change cursor to pointer to indicate interactivity */
     font-weight: 500;              /* Set font weight to medium */
@@ -196,7 +196,7 @@ a .btn{
 /* Social media icons container */
 .socials{
     display: flex;                 /* Use flexbox layout */
-    gap: 2rem;                    /* Set a gap of 2rem between icons */
+    gap: 2rem;                     /* Set a gap of 2rem between icons */
 }
 
 /* Individual social media icon styling */
@@ -228,7 +228,7 @@ a .btn{
     display: flex;                 /* Use flexbox layout */
     align-items: center;           /* Center items vertically */
     justify-content: center;       /* Center items horizontally */
-    gap: 5rem;                    /* Add a gap of 5rem between child elements */
+    gap: 5rem;                     /* Add a gap of 5rem between child elements */
 }
 
 /* Paragraph styling within skills-info */
@@ -239,9 +239,9 @@ a .btn{
 
 /* Grid layout for skills cards */
 .grid{
-    display: grid;                /* Use CSS Grid for layout */
+    display: grid;                 /* Use CSS Grid for layout */
     grid-template-columns: repeat(3, 1fr);  /* Create 3 equal-width columns */
-    gap: 2rem;                    /* Add a gap of 2rem between grid items */
+    gap: 2rem;                     /* Add a gap of 2rem between grid items */
 }
 
 /* Individual card styling within the grid */
@@ -252,9 +252,13 @@ a .btn{
     display: flex;                 /* Use flexbox layout */
     flex-direction: column;        /* Stack child elements vertically */
     align-items: center;           /* Center items horizontally */
-    justify-content: left;         /* Align items to the left (note: left is the default for justify-content in a column layout) */
+    justify-content: left;         /* Align items to the left (default for column) */
     cursor: pointer;               /* Change cursor to pointer to indicate interactivity */
     transition: 0.2s ease-in-out;  /* Animate changes over 0.2 seconds */
+
+    /* FIXED HEIGHT & SCROLL: ensures the card doesn’t stretch too tall */
+    height: 600px;                 /* You can adjust this if you want more/less space */
+    overflow-y: auto;              /* Allow scrolling inside the card if content is long */
 }
 
 /* Hover effect for grid cards */
@@ -296,20 +300,20 @@ a .btn{
 
 /* Projects grid layout styling */
 .projects-grid{
-    display: grid;                /* Use CSS Grid layout */
+    display: grid;                 /* Use CSS Grid layout */
     grid-template-columns: repeat(3, 1fr);  /* Create 3 equal-width columns */
-    gap: 2rem;                    /* Add a gap of 2rem between project cards */
+    gap: 2rem;                     /* Add a gap of 2rem between project cards */
 }
 
 /* Individual project card styling */
 .project-card{
-    padding: 3rem 2rem;            /* Add vertical padding of 3rem and horizontal padding of 2rem */
+    padding: 3rem 2rem;           /* Add vertical padding of 3rem and horizontal padding of 2rem */
     display: flex;                 /* Use flexbox layout */
     flex-direction: column;        /* Stack child elements vertically */
     align-items: center;           /* Center child elements horizontally */
     justify-content: center;       /* Center child elements vertically */
     text-align: center;            /* Center the text inside the project card */
-    gap: 1.5rem;                  /* Set a gap of 1.5rem between child elements */
+    gap: 1.5rem;                   /* Set a gap of 1.5rem between child elements */
     border: 2px solid black;       /* Add a 2px solid black border */
     border-radius: 3rem;           /* Round the corners with a 3rem radius */
     cursor: pointer;               /* Change cursor to pointer when hovering */
@@ -366,7 +370,7 @@ a .btn{
 /* Overall Contact section styling */
 .contact {
     width: 100%;                   /* Set the contact section to take full width */
-    padding: 13.5rem 0 8.5rem;      /* Apply padding: 13.5rem top, 0 left/right, and 8.5rem bottom */
+    padding: 13.5rem 0 8.5rem;     /* Apply padding: 13.5rem top, 0 left/right, and 8.5rem bottom */
 }
 
 /* Container for the contact content */
@@ -375,8 +379,8 @@ a .btn{
     margin: 0 auto;                /* Center the contact box horizontally */
     width: 100%;                   /* Set width to 100% for responsiveness */
     border-radius: 45px;           /* Round the corners with a 45px radius */
-    padding: 5.5rem 4.5rem;         /* Apply padding: 5.5rem top/bottom and 4.5rem left/right */
-    display: grid;                /* Use CSS Grid layout */
+    padding: 5.5rem 4.5rem;        /* Apply padding: 5.5rem top/bottom and 4.5rem left/right */
+    display: grid;                 /* Use CSS Grid layout */
     grid-template-columns: repeat(2,1fr);  /* Create 2 equal-width columns for layout */
 }
 
@@ -432,83 +436,83 @@ a .btn{
 
 /* Remove the pseudo-element after the title in the contact form */
 .contact-form .title:after {
-    display: none;                /* Hide the after pseudo-element, if any */
+    display: none;                 /* Hide the after pseudo-element, if any */
 }
 
 /* Ensure no margin is added to titles inside .contact-from (possible typo in class name) */
 .contact-from .title {
-    margin: 0;                    /* Remove any default margin */
+    margin: 0;                     /* Remove any default margin */
 }
 
 /* Layout for rows inside the contact form */
 .contact-form .row {
-    width: 100%;                  /* Set the row width to 100% */
-    display: grid;               /* Use CSS Grid layout */
+    width: 100%;                   /* Set the row width to 100% */
+    display: grid;                 /* Use CSS Grid layout */
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));  /* Create as many columns as will fit, each at least 130px wide */
-    grid-column-gap: 0.6rem;      /* Set a gap of 0.6rem between columns */
+    grid-column-gap: 0.6rem;       /* Set a gap of 0.6rem between columns */
 }
 
 /* Styling for input fields in the contact form */
 .contact-input {
-    padding: 1.2rem 2.1rem;       /* Add padding inside input fields */
-    margin: 0.6rem 0;             /* Add vertical margin of 0.6rem */
-    border: none;                 /* Remove the default input border */
-    outline: none;                /* Remove the default focus outline */
-    background: #f3f3f3;          /* Set a light gray background for the inputs */
-    border-radius: 4rem;          /* Round the input corners with a 4rem radius */
-    font-weight: 600;             /* Set a semi-bold font weight for the input text */
-    font-size: 1.25rem;           /* Set the input text size to 1.25rem */
-    transition: 0.3s;             /* Animate any changes over 0.3 seconds */
+    padding: 1.2rem 2.1rem;        /* Add padding inside input fields */
+    margin: 0.6rem 0;              /* Add vertical margin of 0.6rem */
+    border: none;                  /* Remove the default input border */
+    outline: none;                 /* Remove the default focus outline */
+    background: #f3f3f3;           /* Set a light gray background for the inputs */
+    border-radius: 4rem;           /* Round the input corners with a 4rem radius */
+    font-weight: 600;              /* Set a semi-bold font weight for the input text */
+    font-size: 1.25rem;            /* Set the input text size to 1.25rem */
+    transition: 0.3s;              /* Animate any changes over 0.3 seconds */
 }
 
 /* Placeholder styling for contact inputs */
 .contact-input::placeholder {
-    font-weight: 400;             /* Set the placeholder font weight to normal */
+    font-weight: 400;              /* Set the placeholder font weight to normal */
 }
 
 /* Additional styling for textarea-like inputs */
 .contact-input.textarea {
-    resize: none;                /* Prevent the user from resizing the textarea */
-    min-height: 280px;           /* Set a minimum height of 280px */
-    border-radius: 2rem;         /* Round the corners with a 2rem radius */
+    resize: none;                  /* Prevent the user from resizing the textarea */
+    min-height: 280px;             /* Set a minimum height of 280px */
+    border-radius: 2rem;           /* Round the corners with a 2rem radius */
 }
 
 /* Hover effect for contact inputs */
 .contact-input:hover {
-    background-color: #ececec;   /* Darken the background slightly on hover */
+    background-color: #ececec;     /* Darken the background slightly on hover */
 }
 
 /* Focus effect for contact inputs */
 .contact-input:focus {
-    background: #eaeaea;         /* Change the background to a slightly different shade when focused */
+    background: #eaeaea;           /* Change the background to a slightly different shade when focused */
 }
 
 /* Add a top margin to buttons in the contact form */
 .contact-form .btn{
-    margin-top: 20px;            /* Add a 20px margin on top */
+    margin-top: 20px;              /* Add a 20px margin on top */
 }
 
 /* ----------------- NEW LINES BELOW ----------------- */
 
 /* Make the main "Contact Me" heading bigger & bolder */
 .contact .contact-tile {
-    font-size: 4rem;             /* Set font size to 4rem for the contact section title */
-    font-weight: 600;            /* Make the text semi-bold */
-    display: flex;               /* Use flexbox for alignment */
-    justify-content: center;     /* Center the title horizontally */
-    align-items: center;         /* Center the title vertically */
+    font-size: 4rem;               /* Set font size to 4rem for the contact section title */
+    font-weight: 600;              /* Make the text semi-bold */
+    display: flex;                 /* Use flexbox for alignment */
+    justify-content: center;       /* Center the title horizontally */
+    align-items: center;           /* Center the title vertically */
 }
 
 /* Make the "Get in touch" heading bigger & bolder */
 .contact-info .title {
-    font-size: 2rem;             /* Increase font size to 2rem */
-    font-weight: bold;           /* Set the font weight to bold */
+    font-size: 2rem;               /* Increase font size to 2rem */
+    font-weight: bold;             /* Set the font weight to bold */
 }
 
 /* Make the title in the contact form bigger & bolder */
 .contact-form .title{
-    font-size: 2rem;             /* Set font size to 2rem */
-    font-weight: bold;           /* Make the title text bold */
+    font-size: 2rem;               /* Set font size to 2rem */
+    font-weight: bold;             /* Make the title text bold */
 }
 
 /* ----------------------------- */
@@ -516,74 +520,73 @@ a .btn{
 /* ----------------------------- */
 
 footer{
-    bottom: 0;                   /* Position the footer at the bottom (if positioned absolutely or fixed) */
-    left: 0;                     /* Align the footer to the left */
-    height: 10rem;               /* Set the footer height to 10rem */
-    width: 100%;                 /* Make the footer span the full width of the page */
-    display: flex;               /* Use flexbox layout */
-    flex-direction: column;      /* Stack footer items vertically */
-    gap: 1rem;                   /* Add a 1rem gap between footer items */
-    align-items: center;         /* Center footer items horizontally */
-    justify-content: center;     /* Center footer items vertically */
+    bottom: 0;                     /* Position the footer at the bottom (if positioned absolutely or fixed) */
+    left: 0;                       /* Align the footer to the left */
+    height: 10rem;                 /* Set the footer height to 10rem */
+    width: 100%;                   /* Make the footer span the full width of the page */
+    display: flex;                 /* Use flexbox layout */
+    flex-direction: column;        /* Stack footer items vertically */
+    gap: 1rem;                     /* Add a 1rem gap between footer items */
+    align-items: center;           /* Center footer items horizontally */
+    justify-content: center;       /* Center footer items vertically */
 }
 
 /* Styling for unordered list inside the footer */
 footer ul{
-    display: flex;               /* Use flexbox layout for list items */
-    align-items: center;         /* Center items vertically */
-    gap: 3rem;                   /* Add a gap of 3rem between list items */
+    display: flex;                 /* Use flexbox layout for list items */
+    align-items: center;           /* Center items vertically */
+    gap: 3rem;                     /* Add a gap of 3rem between list items */
 }
 
 /* Styling for anchor tags inside the footer's list items */
 footer ul li a{
-    color: black;                /* Set text color to black */
-    font-weight: 600;            /* Set font weight to semi-bold */
+    color: black;                  /* Set text color to black */
+    font-weight: 600;              /* Set font weight to semi-bold */
 }
 
 /* Styling for the copyright text in the footer */
 .copyright{
-    font-weight: 300;            /* Use a light font weight */
-    margin-top: 2rem;            /* Add a top margin of 2rem */
+    font-weight: 300;              /* Use a light font weight */
+    margin-top: 2rem;              /* Add a top margin of 2rem */
 }
 
-
 /* ----------------------------- */
-/* Media Queries (Modified Responsive Changes) */
+/* Media Queries (Responsive Changes) */
 /* ----------------------------- */
 
 /* Adjustments for screens with a maximum width of 1280px */
 @media(max-width:1280px){
     header{
-        padding: 1rem 2rem;      /* Reduce header padding for medium screens */
-        gap: 2rem;               /* Reduce gap between header items */
+        padding: 1rem 2rem;       /* Reduce header padding for medium screens */
+        gap: 2rem;                /* Reduce gap between header items */
     }
     .about .about-container{
-        gap: 3rem;               /* Reduce gap between items in the About section */
+        gap: 3rem;                /* Reduce gap between items in the About section */
     }
     .skills-info{
-        flex-direction: column;  /* Stack skills info vertically on smaller screens */
+        flex-direction: column;   /* Stack skills info vertically on smaller screens */
     }
 }
 
 /* Adjustments for screens with a maximum width of 768px */
 @media(max-width:768px){
     header{
-        gap: 1rem;               /* Further reduce gap between header items */
+        gap: 1rem;                /* Further reduce gap between header items */
         padding: 1rem 1rem;       /* Reduce header padding */
     }
     .contact-form input::placeholder{
-        text-wrap: wrap;         /* Allow placeholder text to wrap (non-standard property) */
+        text-wrap: wrap;          /* Allow placeholder text to wrap (non-standard property) */
         font-size: 1.5rem;        /* Increase font size for readability on smaller screens */
     }
     header .logo{
-        font-size: 1rem;         /* Reduce logo font size */
+        font-size: 1rem;          /* Reduce logo font size */
     }
     header .visit-btn{
-        display: none;           /* Hide the visit button on smaller screens */
+        display: none;            /* Hide the visit button on smaller screens */
     }
     .about-container{
-        flex-direction: column;  /* Stack items vertically in the About container */
-        gap: 2rem;               /* Reduce gap to prevent clumping */
+        flex-direction: column;   /* Stack items vertically in the About container */
+        gap: 2rem;                /* Reduce gap to prevent clumping */
     }
     .grid{
         grid-template-columns: repeat(1,1fr);  /* Single column grid for skills */
@@ -597,60 +600,60 @@ footer ul li a{
 /* Adjustments for screens with a maximum width of 600px */
 @media(max-width:600px){
     header #menu-icon{
-        display: block;          /* Show the menu icon for mobile devices */
+        display: block;           /* Show the menu icon for mobile devices */
     }
     .nav-links{
-        position: absolute;      /* Position navigation links absolutely for mobile layout */
-        top: 100%;               /* Place the navigation links directly below the header */
+        position: absolute;       /* Position navigation links absolutely for mobile layout */
+        top: 100%;                /* Place the navigation links directly below the header */
         margin-top: 0.5rem;       /* Reduce margin on top to tighten spacing */
-        width: 90%;              /* Use 90% width to allow for some side margins */
-        padding: 1rem;           /* Add padding for spacing inside the container */
-        color: white;            /* Set text color to white */
-        display: flex;           /* Use flexbox layout for the navigation links */
-        flex-direction: column;  /* Stack navigation links vertically */
-        text-align: center;      /* Center-align the text inside navigation links */
+        width: 90%;               /* Use 90% width to allow for some side margins */
+        padding: 1rem;            /* Add padding for spacing inside the container */
+        color: white;             /* Set text color to white */
+        display: flex;            /* Use flexbox layout for the navigation links */
+        flex-direction: column;   /* Stack navigation links vertically */
+        text-align: center;       /* Center-align the text inside navigation links */
         background: rgba(0,0,0,0.9); /* Use a more opaque background for better visibility */
-        border-radius: 3rem;     /* Round the corners of the navigation links container */
-        display: none;           /* Hide the navigation links by default (toggled via script) */
+        border-radius: 3rem;      /* Round the corners of the navigation links container */
+        display: none;            /* Hide the navigation links by default (toggled via script) */
     }
     .nav-links li{
-        margin-top: 1rem;      /* Reduce top margin for spacing between list items */
-        padding: 0.8rem;           /* Reduce padding around each navigation list item */
+        margin-top: 1rem;         /* Reduce top margin for spacing between list items */
+        padding: 0.8rem;          /* Reduce padding around each navigation list item */
     }
     .nav-links.active{
-        display: block;          /* Display the navigation links when the "active" class is applied */
+        display: block;           /* Display the navigation links when the "active" class is applied */
     }
     header{
-        padding: 1rem 1.5rem;      /* Adjust header padding on very small screens */
+        padding: 1rem 1.5rem;     /* Adjust header padding on very small screens */
         gap: 1.5rem;              /* Reduce gap between header elements */
     }
     header .logo{
-        font-size: 1.2rem;       /* Slightly adjust logo font size for visibility */
+        font-size: 1.2rem;        /* Slightly adjust logo font size for visibility */
     }
     .about-container img{
-        width: 80vw;             /* Set the About section image to 80% of the viewport width */
+        width: 80vw;              /* Set the About section image to 80% of the viewport width */
     }
     .contact-box{
-        display: flex;           /* Use flexbox layout for contact box */
-        flex-direction: column;  /* Stack contact box elements vertically on mobile */
+        display: flex;            /* Use flexbox layout for contact box */
+        flex-direction: column;   /* Stack contact box elements vertically on mobile */
         padding: 3rem 1rem;       /* Reduce overall padding */
     }
     .contact-form{
-        margin-top: 2rem;        /* Reduce top margin to separate contact form from other elements */
-        padding-left: 0;         /* Remove left padding to use full width */
+        margin-top: 2rem;         /* Reduce top margin to separate contact form from other elements */
+        padding-left: 0;          /* Remove left padding to use full width */
     }
     .contact-form input, 
     .contact-form textarea{
         padding: 0.8rem 1rem;     /* Adjust input padding for mobile devices */
-        width: 100%;             /* Set input width to full container width */
-        font-size: 1.3rem;       /* Adjust input font size for readability */
+        width: 100%;              /* Set input width to full container width */
+        font-size: 1.3rem;        /* Adjust input font size for readability */
     }
     .contact-form input::placeholder{
-        text-wrap: nowrap;       /* Prevent placeholder text from wrapping (non-standard property) */
-        font-size: 1.3rem;       /* Adjust placeholder font size */
+        text-wrap: nowrap;        /* Prevent placeholder text from wrapping (non-standard property) */
+        font-size: 1.3rem;        /* Adjust placeholder font size */
     }
     footer ul{
-        gap: 1rem;              /* Reduce gap between footer list items on small screens */
+        gap: 1rem;                /* Reduce gap between footer list items on small screens */
     }
 }
 
@@ -677,4 +680,14 @@ footer ul li a{
     .projects-grid {
         grid-template-columns: 1fr; /* Use a single column layout for project cards on small screens */
     }
+}
+
+/* -----------------------------
+   Extra tweak for smaller screens to reduce paragraph size in Skills
+------------------------------*/
+@media (max-width: 900px) {
+  .grid-card p {
+    font-size: 1rem;       /* Slightly smaller text to avoid clumsy wrapping */
+    line-height: 1.5;
+  }
 }
