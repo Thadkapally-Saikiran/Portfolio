@@ -300,9 +300,10 @@ a .btn{
 
 /* Projects grid layout styling */
 .projects-grid{
-    display: grid;                 /* Use CSS Grid layout */
-    grid-template-columns: repeat(3, 1fr);  /* Create 3 equal-width columns */
-    gap: 2rem;                     /* Add a gap of 2rem between project cards */
+     display: grid;                 /* Use CSS Grid layout */
+     grid-template-columns: repeat(3, 1fr);  /*Create 3 equal-width columns */
+     gap: 2rem;                     /*Add a gap of 2rem between project cards */
+    
 }
 
 /* Individual project card styling */
@@ -595,6 +596,17 @@ footer ul li a{
     .contact-box {
         padding: 4rem 2rem;       /* Reduce padding inside contact box */
     }
+
+    /* ADDED LINES TO FIX OVERFLOW */
+    section {
+        padding: 8rem 2rem; /* Narrow the side padding so the grid won't overflow */
+    }
+    .grid,
+    .projects-grid {
+        width: 100%;
+        margin: 0 auto;
+        overflow-x: hidden; /* Ensure no horizontal scroll bar appears */
+    }
 }
 
 /* Adjustments for screens with a maximum width of 600px */
@@ -655,8 +667,15 @@ footer ul li a{
     footer ul{
         gap: 1rem;                /* Reduce gap between footer list items on small screens */
     }
-}
 
+    /* ADDED LINES TO FIX OVERFLOW ON VERY SMALL SCREENS */
+    .grid,
+    .projects-grid {
+        width: 100%;
+        margin: 0 auto;
+        overflow-x: hidden; /* Double-check we remove horizontal scroll on mobile too */
+    }
+}
 
 /* ----------------------------- */
 /* Responsive adjustments for the Projects section */
@@ -676,11 +695,12 @@ footer ul li a{
     }
 }
 
-/* For mobile devices */
+/* For mobile devices */ 
 @media (max-width: 480px) {
     .projects-grid {
-        grid-template-columns: 1fr; /* Use a single column layout for project cards on small screens */
+         grid-template-columns: 1fr; /*Use a single column layout for project cards on small screens */
     }
+    
 }
 
 /* Slightly reduce paragraph font size in Skills if needed (optional) */
@@ -690,3 +710,11 @@ footer ul li a{
     line-height: 1.5;
   }
 }
+
+
+
+
+
+
+
+
