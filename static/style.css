@@ -368,6 +368,7 @@ a .btn {
     margin-bottom: 1.3rem;
 }
 
+/* The icon container */
 .contact-icon {
     min-width: 67px;
     height: 67px;
@@ -384,9 +385,14 @@ a .btn {
     line-height: 67px;
 }
 
+/* Info text next to the icon, e.g. your email address */
 .info-text {
     font-size: 1.3rem;
     display: inline-block;
+    /* Let long emails wrap instead of overflowing */
+    overflow-wrap: anywhere;  
+    word-wrap: break-all;    
+    white-space: normal;      
 }
 
 .contact-form .title:after {
