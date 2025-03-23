@@ -1,5 +1,5 @@
 /* Apply the following styles to all elements */
-*{
+* {
     margin: 0;                     /* Remove default margin from all elements */
     padding: 0;                    /* Remove default padding from all elements */
     box-sizing: border-box;        /* Use border-box model so that padding and borders are included in the element's total width and height */
@@ -20,7 +20,7 @@ header {
     justify-content: center;       /* Horizontally center the header items */
     gap: 5rem;                     /* Add a 5rem gap between each direct child element */
     background-color: rgba(0,0,0,0.8); /* Set a semi-transparent black background color */
-    backdrop-filter:  blur(8px);   /* Apply a blur effect to the background behind the header */
+    backdrop-filter: blur(8px);    /* Apply a blur effect to the background behind the header */
     color: white;                  /* Set the text color to white */
     padding: 0.5rem 1.5rem;        /* Add padding: 0.5rem top/bottom and 1.5rem left/right */
     border-radius: 3rem;           /* Round the corners of the header with a 3rem radius */
@@ -28,7 +28,7 @@ header {
 }
 
 /* Logo styling inside header */
-.logo{
+.logo {
     color: white;                  /* Set logo text color to white */
     font-size: 1.3rem;             /* Set font size to 1.3rem */
     font-weight: 600;              /* Make the logo text semi-bold */
@@ -37,25 +37,25 @@ header {
 }
 
 /* Hover effect for logo */
-.logo:hover{
+.logo:hover {
     transform: scale(1.1);         /* Slightly enlarge the logo when hovered over */
 }
 
 /* Navigation links container */
-.nav-links{
+.nav-links {
     display: flex;                 /* Use flexbox layout for navigation links */
     gap: 2rem;                     /* Set a 2rem gap between each navigation link */
 }
 
 /* Styling for navigation list items anchor tags */
-li a{
+li a {
     position: relative;            /* Set relative positioning to enable absolute positioning of pseudo-elements */
     color: white;                  /* Set the text color to white */
     font-weight: 300;              /* Use a light font weight for the navigation text */
 }
 
 /* Before pseudo-element for navigation links */
-li a::before{
+li a::before {
     position: absolute;            /* Position the pseudo-element absolutely relative to the anchor */
     content: '';                   /* Generate an empty content, used for decorative purposes */
     width: 0;                      /* Start with a width of 0, to be animated on hover */
@@ -68,12 +68,12 @@ li a::before{
 }
 
 /* Hover effect for navigation links to animate the pseudo-element */
-li a:hover::before{
+li a:hover::before {
     width: 100%;                   /* Expand the pseudo-element to cover the full width of the anchor on hover */
 }
 
 /* Style for a button typically used to 'visit' something */
-.visit-btn{
+.visit-btn {
     padding: 0.8rem 1.5rem;        /* Set padding around the button text */
     border-radius: 3rem;           /* Round the button's corners */
     border: none;                  /* Remove the default border */
@@ -87,13 +87,13 @@ li a:hover::before{
 }
 
 /* Hover effect for the visit button */
-.visit-btn:hover{
+.visit-btn:hover {
     background: linear-gradient(to right, rgba(255,0,255), rgb(0, 157, 255)); /* Reverse the gradient colors on hover */
     transform: scale(1.03);        /* Slightly enlarge the button on hover */
 }
 
 /* Style for the menu icon (typically used for mobile views) */
-#menu-icon{
+#menu-icon {
     font-size: 2rem;               /* Set the menu icon size to 2rem */
     display: none;                 /* Hide the menu icon by default (shown via media queries later) */
 }
@@ -103,22 +103,22 @@ li a:hover::before{
 /* ----------------------------- */
 
 /* Style for any section element */
-section{
+section {
     min-height: 100vh;             /* Ensure each section is at least the height of the viewport */
-    padding: 8rem 12%;             /* Apply 8rem padding on top and bottom, 12% on left/right */
+    padding: 8rem 12%;             /* Apply 8rem padding on top/bottom, 12% on left/right */
     width: 100%;                   /* Set section width to 100% of its container */
     position: relative;            /* Set relative positioning to allow absolute children positioning if needed */
 }
 
 /* Container specific to the About section */
-.about{
+.about {
     display: flex;                 /* Use flexbox layout for the about section */
     align-items: center;           /* Vertically center items within the about section */
     justify-content: center;       /* Horizontally center items within the about section */
 }
 
 /* Inner container within the About section */
-.about .about-container{
+.about .about-container {
     display: flex;                 /* Use flexbox layout */
     align-items: center;           /* Vertically center the items */
     justify-content: center;       /* Horizontally center the items */
@@ -126,7 +126,7 @@ section{
 }
 
 /* Styling for the image in the About section */
-.about img{
+.about img {
     /* box-shadow: 0px 0px 30px #00ffff, 0px 0px 60px #00ffff, 0px 0px 100px #00ffff; */
     width: 450px;                  /* Set image width to 450px */
     height: 450px;                 /* Set image height to 450px */
@@ -134,7 +134,7 @@ section{
 }
 
 /* Container for information boxes in the About section */
-.info-box{
+.info-box {
     display: flex;                 /* Use flexbox for layout */
     flex-direction: column;        /* Stack children vertically */
     text-align: center;            /* Center-align the text inside the box */
@@ -144,20 +144,20 @@ section{
 }
 
 /* Heading level 3 inside info-box */
-.info-box h3{
+.info-box h3 {
     font-size: 1.8rem;             /* Set font size to 1.8rem */
     font-weight: 500;              /* Set a medium font weight */
     opacity: 0.8;                  /* Reduce the opacity slightly for a softer look */
 }
 
 /* Heading level 1 inside info-box */
-.info-box h1{
+.info-box h1 {
     font-size: 4rem;               /* Set a large font size (4rem) */
     font-weight: 600;              /* Make the text semi-bold */
 }
 
 /* Span element inside info-box for highlighting text */
-.info-box span{
+.info-box span {
     background: linear-gradient(to right, rgba(255,0,255), rgb(0, 157, 255)); /* Gradient background */
     background-clip: text;         /* Clip the background to the text (for gradient text effect) */
     color: transparent;            /* Make the text transparent so the gradient shows through */
@@ -165,13 +165,13 @@ section{
 }
 
 /* Container for grouping buttons */
-.btn-group{
+.btn-group {
     display: flex;                 /* Use flexbox to layout buttons */
     gap: 1rem;                     /* Set a 1rem gap between each button */
 }
 
 /* General button styling */
-.btn{
+.btn {
     border-radius: 3rem;           /* Round button corners with a 3rem radius */
     padding: 0.5rem 1.5rem;        /* Set padding for top/bottom and left/right */
     border: 2px solid black;       /* Add a 2px solid black border */
@@ -182,31 +182,31 @@ section{
 }
 
 /* Hover effect for buttons */
-.btn:hover{
+.btn:hover {
     background-color: black;       /* Change background to black on hover */
     color: white;                  /* Change text color to white on hover */
 }
 
 /* Anchor tag containing a button */
-a .btn{
+a .btn {
     color: black;                  /* Set text color to black when a button is inside an anchor tag */
 }
 
 /* Social media icons container */
-.socials{
+.socials {
     display: flex;                 /* Use flexbox layout */
     gap: 2rem;                     /* Set a gap of 2rem between icons */
 }
 
 /* Individual social media icon styling */
-.socials i{
+.socials i {
     font-size: 2.5rem;             /* Set icon size to 2.5rem */
     cursor: pointer;               /* Change cursor to pointer on hover */
     transition: 0.2s ease-in-out;  /* Animate changes over 0.2 seconds */
 }
 
 /* Hover effect for social media icons */
-.socials i:hover{
+.socials i:hover {
     transform: scale(1.1);         /* Slightly enlarge the icon on hover */
 }
 
@@ -215,7 +215,7 @@ a .btn{
 /* ----------------------------- */
 
 /* Style for section titles */
-.section-title{
+.section-title {
     text-align: center;            /* Center-align the title text */
     font-size: 4rem;               /* Set font size to 4rem */
     font-weight: 600;              /* Set font weight to semi-bold */
@@ -223,7 +223,7 @@ a .btn{
 }
 
 /* Container for skills information */
-.skills-info{
+.skills-info {
     display: flex;                 /* Use flexbox layout */
     align-items: center;           /* Center items vertically */
     justify-content: center;       /* Center items horizontally */
@@ -231,20 +231,20 @@ a .btn{
 }
 
 /* Paragraph styling within skills-info */
-.skills-info p{
+.skills-info p {
     font-size: 1.2rem;             /* Set font size to 1.2rem */
     margin-top: 25px;              /* Add a top margin of 25px */
 }
 
 /* Grid layout for skills cards */
-.grid{
+.grid {
     display: grid;                 /* Use CSS Grid for layout */
     grid-template-columns: repeat(3, 1fr);  /* Create 3 equal-width columns */
     gap: 2rem;                     /* Add a gap of 2rem between grid items */
 }
 
 /* Individual card styling within the grid */
-.grid-card{
+.grid-card {
     border: 2px solid black;       /* Add a 2px solid black border */
     border-radius: 3rem;           /* Round the corners with a 3rem radius */
     padding: 3rem;                 /* Add padding of 3rem on all sides */
@@ -254,7 +254,8 @@ a .btn{
     justify-content: left;         /* Align items to the left (default for column) */
     cursor: pointer;               /* Change cursor to pointer to indicate interactivity */
     transition: 0.2s ease-in-out;  /* Animate changes over 0.2 seconds */
-    height: 600px;                 /* Fix card height so it doesn’t stretch too tall */
+    /* height: 600px;  <-- REMOVED */
+    min-height: 400px;             /* Use a min-height instead of a fixed height */
     overflow-y: auto;              /* Let content scroll if it's too long */
 
     /* HIDE THE SCROLLBAR */
@@ -266,20 +267,20 @@ a .btn{
 }
 
 /* Hover effect for grid cards */
-.grid-card:hover{
+.grid-card:hover {
     transform: scale(1.02);        /* Slightly enlarge the card on hover */
     background-color: black;       /* Change background to black on hover */
     color: white;                  /* Change text color to white on hover */
 }
 
 /* Icon styling inside grid cards */
-.grid-card i{
+.grid-card i {
     font-size: 1.5rem;             /* Set icon size to 1.5rem */
     margin-bottom: 1rem;           /* Add a margin of 1rem below the icon */
 }
 
 /* Span styling inside grid cards */
-.grid-card span{
+.grid-card span {
     font-size: 1.5rem;             /* Set font size to 1.5rem */
     font-weight: 500;              /* Set a medium font weight */
     background: linear-gradient(to right, rgb(0, 157, 255), rgb(255,0,255)); /* Horizontal gradient */
@@ -288,26 +289,25 @@ a .btn{
 }
 
 /* Custom scrollbar styling for WebKit browsers (now hidden, so it won't show) */
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 20px;                   /* Original styling remains, but it's hidden by display:none above */
 }
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     background-color: rgb(219,219,219);
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background: linear-gradient(to bottom, #009dff, #ff00ff);
 }
 
 /* Projects grid layout styling */
-.projects-grid{
-     display: grid;                 /* Use CSS Grid layout */
-     grid-template-columns: repeat(3, 1fr);  /*Create 3 equal-width columns */
-     gap: 2rem;                     /*Add a gap of 2rem between project cards */
-    
+.projects-grid {
+    display: grid;                 /* Use CSS Grid layout */
+    grid-template-columns: repeat(3, 1fr);  /*Create 3 equal-width columns */
+    gap: 2rem;                     /*Add a gap of 2rem between project cards */
 }
 
 /* Individual project card styling */
-.project-card{
+.project-card {
     padding: 3rem 2rem;           /* Add vertical padding of 3rem and horizontal padding of 2rem */
     display: flex;                 /* Use flexbox layout */
     flex-direction: column;        /* Stack child elements vertically */
@@ -321,45 +321,45 @@ a .btn{
     transition: 0.3s ease-in-out;  /* Animate any changes over 0.3 seconds */
 }
 
-.project-card p{
+.project-card p {
     font-size: 25px;
     font-weight: 600;
 }
 
-.project-card h3{
+.project-card h3 {
     background: linear-gradient(to right, rgb(0, 157, 255), rgb(255,0,255)); /* Horizontal gradient */
     background-clip: text;         /* Clip the background to the text for a gradient text effect */
     color: transparent; 
 }
 
 /* Hover effect for project cards */
-.project-card:hover{
+.project-card:hover {
     background-color: black;       /* Change background to black on hover */
     color: white;                  /* Change text color to white on hover */
     transform: translateY(-10px) scale(1.02);  /* Move the card up by 10px and slightly enlarge it on hover */
 }
 
 /* Styling for images within project cards */
-.project-card img{
+.project-card img {
     width: 20vw;                   /* Set the image width to 20% of the viewport width */
     border-radius: 1rem;           /* Round the image corners with a 1rem radius */
 }
 
 /* Change button styling inside a project card on hover */
-.project-card:hover .btn{
+.project-card:hover .btn {
     border: 2px solid white;       /* Change button border to 2px solid white on hover */
     color: white;                  /* Change button text color to white on hover */
 }
 
 /* Additional hover effect for button inside project card when hovered */
-.project-card:hover .btn:hover{
+.project-card:hover .btn:hover {
     border: 2px solid white;       /* Maintain a white border when button is hovered over */
     background-color: white;       /* Change button background to white */
     color: black;                  /* Change button text color to black */
 }
 
 /* Project card title styling */
-.project-card h3{
+.project-card h3 {
     font-size: 2rem;               /* Set font size to 2rem */
     font-weight: 500;              /* Set a medium font weight */
 }
@@ -489,7 +489,7 @@ a .btn{
 }
 
 /* Add a top margin to buttons in the contact form */
-.contact-form .btn{
+.contact-form .btn {
     margin-top: 20px;              /* Add a 20px margin on top */
 }
 
@@ -511,7 +511,7 @@ a .btn{
 }
 
 /* Make the title in the contact form bigger & bolder */
-.contact-form .title{
+.contact-form .title {
     font-size: 2rem;               /* Set font size to 2rem */
     font-weight: bold;             /* Make the title text bold */
 }
@@ -520,7 +520,7 @@ a .btn{
 /* Footer styles */
 /* ----------------------------- */
 
-footer{
+footer {
     bottom: 0;                     /* Position the footer at the bottom (if positioned absolutely or fixed) */
     left: 0;                       /* Align the footer to the left */
     height: 10rem;                 /* Set the footer height to 10rem */
@@ -533,20 +533,20 @@ footer{
 }
 
 /* Styling for unordered list inside the footer */
-footer ul{
+footer ul {
     display: flex;                 /* Use flexbox layout for list items */
     align-items: center;           /* Center items vertically */
     gap: 3rem;                     /* Add a gap of 3rem between list items */
 }
 
 /* Styling for anchor tags inside the footer's list items */
-footer ul li a{
+footer ul li a {
     color: black;                  /* Set text color to black */
     font-weight: 600;              /* Set font weight to semi-bold */
 }
 
 /* Copyright */
-.copyright{
+.copyright {
     font-weight: 300;              /* Use a light font weight */
     margin-top: 2rem;              /* Add a top margin of 2rem */
 }
@@ -556,40 +556,49 @@ footer ul li a{
 /* ----------------------------- */
 
 /* Adjustments for screens with a maximum width of 1280px */
-@media(max-width:1280px){
-    header{
+@media(max-width:1280px) {
+    header {
         padding: 1rem 2rem;       /* Reduce header padding for medium screens */
         gap: 2rem;                /* Reduce gap between header items */
     }
-    .about .about-container{
+    .about .about-container {
         gap: 3rem;                /* Reduce gap between items in the About section */
     }
-    .skills-info{
+    .skills-info {
         flex-direction: column;   /* Stack skills info vertically on smaller screens */
+    }
+
+    /* NEW: Switch to 2 columns for .grid and .projects-grid, reduce side padding */
+    .grid,
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    section {
+        padding: 8rem 5%;
     }
 }
 
 /* Adjustments for screens with a maximum width of 768px */
-@media(max-width:768px){
-    header{
+@media(max-width:768px) {
+    header {
         gap: 1rem;                /* Further reduce gap between header items */
         padding: 1rem 1rem;       /* Reduce header padding */
     }
-    .contact-form input::placeholder{
+    .contact-form input::placeholder {
         text-wrap: wrap;          /* Allow placeholder text to wrap (non-standard property) */
         font-size: 1.5rem;        /* Increase font size for readability on smaller screens */
     }
-    header .logo{
+    header .logo {
         font-size: 1rem;          /* Reduce logo font size */
     }
-    header .visit-btn{
+    header .visit-btn {
         display: none;            /* Hide the visit button on smaller screens */
     }
-    .about-container{
+    .about-container {
         flex-direction: column;   /* Stack items vertically in the About container */
         gap: 2rem;                /* Reduce gap to prevent clumping */
     }
-    .grid{
+    .grid {
         grid-template-columns: repeat(1,1fr);  /* Single column grid for skills */
         gap: 1.5rem;             /* Reduce gap for better spacing */
     }
@@ -610,11 +619,11 @@ footer ul li a{
 }
 
 /* Adjustments for screens with a maximum width of 600px */
-@media(max-width:600px){
-    header #menu-icon{
+@media(max-width:600px) {
+    header #menu-icon {
         display: block;           /* Show the menu icon for mobile devices */
     }
-    .nav-links{
+    .nav-links {
         position: absolute;       /* Position navigation links absolutely for mobile layout */
         top: 100%;                /* Place the navigation links directly below the header */
         margin-top: 0.5rem;       /* Reduce margin on top to tighten spacing */
@@ -628,43 +637,43 @@ footer ul li a{
         border-radius: 3rem;      /* Round the corners of the navigation links container */
         display: none;            /* Hide the navigation links by default (toggled via script) */
     }
-    .nav-links li{
+    .nav-links li {
         margin-top: 1rem;         /* Reduce top margin for spacing between list items */
         padding: 0.8rem;          /* Reduce padding around each navigation list item */
     }
-    .nav-links.active{
+    .nav-links.active {
         display: block;           /* Display the navigation links when the "active" class is applied */
     }
-    header{
+    header {
         padding: 1rem 1.5rem;     /* Adjust header padding on very small screens */
         gap: 1.5rem;              /* Reduce gap between header elements */
     }
-    header .logo{
+    header .logo {
         font-size: 1.2rem;        /* Slightly adjust logo font size for visibility */
     }
-    .about-container img{
+    .about-container img {
         width: 80vw;              /* Set the About section image to 80% of the viewport width */
     }
-    .contact-box{
+    .contact-box {
         display: flex;            /* Use flexbox layout for contact box */
         flex-direction: column;   /* Stack contact box elements vertically on mobile */
         padding: 3rem 1rem;       /* Reduce overall padding */
     }
-    .contact-form{
+    .contact-form {
         margin-top: 2rem;         /* Reduce top margin to separate contact form from other elements */
         padding-left: 0;          /* Remove left padding to use full width */
     }
     .contact-form input, 
-    .contact-form textarea{
+    .contact-form textarea {
         padding: 0.8rem 1rem;     /* Adjust input padding for mobile devices */
         width: 100%;              /* Set input width to full container width */
         font-size: 1.3rem;        /* Adjust input font size for readability */
     }
-    .contact-form input::placeholder{
+    .contact-form input::placeholder {
         text-wrap: nowrap;        /* Prevent placeholder text from wrapping (non-standard property) */
         font-size: 1.3rem;        /* Adjust placeholder font size */
     }
-    footer ul{
+    footer ul {
         gap: 1rem;                /* Reduce gap between footer list items on small screens */
     }
 
@@ -684,7 +693,7 @@ footer ul li a{
 /* For smaller desktops or laptops */
 @media (max-width: 1024px) {
     .projects-grid {
-        grid-template-columns: repeat(3, 1fr); /* Change the grid layout to 3 columns on medium screens */
+        grid-template-columns: repeat(3, 1fr); /* You can adjust to 2 columns if needed */
     }
 }
 
@@ -700,7 +709,6 @@ footer ul li a{
     .projects-grid {
          grid-template-columns: 1fr; /*Use a single column layout for project cards on small screens */
     }
-    
 }
 
 /* Slightly reduce paragraph font size in Skills if needed (optional) */
@@ -710,11 +718,3 @@ footer ul li a{
     line-height: 1.5;
   }
 }
-
-
-
-
-
-
-
-
