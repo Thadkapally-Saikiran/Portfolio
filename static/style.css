@@ -11,12 +11,6 @@
     list-style: none;
 }
 
-html, body {
-    overflow-x: hidden;
-}
-
-
-
 /* ------------------------------------ */
 /* Header */
 /* ------------------------------------ */
@@ -193,7 +187,7 @@ a .btn {
     transition: 0.2s ease-in-out;
 }
 
-socials i:hover {
+.socials i:hover {
     transform: scale(1.1);
 }
 
@@ -236,7 +230,7 @@ socials i:hover {
     justify-content: left;
     cursor: pointer;
     transition: 0.2s ease-in-out;
-    min-height: 400px;
+    min-height: 400px;       /* We'll override this in smaller screens */
     overflow-y: auto;
     -ms-overflow-style: none;  /* IE & Edge */
     scrollbar-width: none;     /* Firefox */
@@ -272,6 +266,9 @@ socials i:hover {
     display: grid; 
     grid-template-columns: repeat(3, 1fr); 
     gap: 2rem;
+    /* Let long words wrap instead of overflowing horizontally */
+    word-wrap: break-word;       /* older property, good fallback */
+    overflow-wrap: anywhere;     /* modern property */
 }
 
 .project-card {
@@ -286,11 +283,17 @@ socials i:hover {
     border-radius: 3rem;
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    /* Let text wrap inside the card as well */
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
 }
 
 .project-card p {
     font-size: 25px;
     font-weight: 600;
+    /* Ensure text wraps if it's very long */
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
 }
 
 .project-card h3 {
@@ -299,6 +302,9 @@ socials i:hover {
     color: transparent;
     font-size: 2rem;
     font-weight: 500;
+    /* Let heading text wrap */
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
 }
 
 .project-card:hover {
@@ -479,7 +485,7 @@ footer ul li a {
     font-weight: 600;
 }
 
-.copyright {
+copyright {
     font-weight: 300;
     margin-top: 2rem;
 }
@@ -549,6 +555,24 @@ footer ul li a {
         width: 100%;
         margin: 0 auto;
         overflow-x: hidden;
+    }
+
+    /* Override min-height & reduce padding for Skills cards */
+    .grid-card {
+        min-height: auto; /* let content define the height now */
+        padding: 1rem;    /* reduce padding so card can shrink */
+    }
+
+    /* Reduce padding for Project cards, ensure text can wrap */
+    .project-card {
+        padding: 1rem;
+        font-size: 0.95rem; /* slightly smaller text on narrow screens */
+    }
+    /* Make images fully responsive, no overflow */
+    .project-card img {
+        max-width: 100%;
+        height: auto;
+        display: block;
     }
 
     .contact-box {
@@ -624,5 +648,17 @@ footer ul li a {
   .grid-card p {
     font-size: 1rem;
     line-height: 1.5;
+  }
+}
+
+/* ----------- max-width: 480px ---------- */
+/* If there's still horizontal overflow on tiny screens, hide it */
+@media (max-width: 480px) {
+  html, body {
+    overflow-x: hidden;
+  }
+  /* You can also reduce font size further if needed */
+  .project-card p {
+    font-size: 0.9rem;
   }
 }
