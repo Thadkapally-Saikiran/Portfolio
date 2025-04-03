@@ -297,7 +297,7 @@ a .btn{
 /* Projects grid layout styling */
 .projects-grid{
     display: grid;                /* Use CSS Grid layout */
-    grid-template-columns: repeat(4, 1fr);  /* Create 4 equal-width columns */
+    grid-template-columns: repeat(3, 1fr);  /* Create 4 equal-width columns */
     gap: 2rem;                    /* Add a gap of 2rem between project cards */
 }
 
